@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Portfolio architecture
+- Keep the portfolio as one index route with in-page anchors because its navigation explicitly scrolls to sections.
+- Keep WhatsApp destination, service limits and timing in a browser-safe configuration module so every CTA and service-rule test uses one source.
+- Store uploaded screenshots as optimized WebP CDN pointers, and keep editorial tokens and motion in global CSS to avoid duplicated styling or binary source files.
