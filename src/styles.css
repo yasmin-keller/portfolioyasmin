@@ -1101,3 +1101,35 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .browser { transform: none; }
 }
+
+/* ------------------------------------- hero: navegador + celular sobreposto */
+
+.mockups {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 44px 56px 0;
+}
+
+.phone.phone-mini {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: clamp(112px, 26%, 160px);
+  padding: 14px 6px 12px;
+  border-radius: 26px;
+  transform: rotate(2deg);
+}
+
+.phone-mini .phone-camera { top: 6px; width: 32px; height: 3px; }
+.phone-mini .phone-screen { border-radius: 18px; aspect-ratio: 452 / 930; }
+.phone-mini .phone-home { bottom: 5px; width: 48px; height: 2px; }
+
+@media (max-width: 900px) {
+  .mockups { padding: 0 28px 40px 0; }
+  .phone.phone-mini { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone.phone-mini { transform: none; }
+}

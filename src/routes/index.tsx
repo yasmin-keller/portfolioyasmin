@@ -73,7 +73,7 @@ function Index() {
           <p className="hero-description">Organizo seus serviços, localização e contato em uma página clara, publicada no domínio do seu negócio.</p>
           <div className="hero-actions"><WhatsAppButton /><Button variant="editorialLink" asChild><a href="#projetos">Ver projetos <ArrowDown aria-hidden="true" /></a></Button></div>
         </div>
-        <figure className="hero-preview"><div className="browser"><div className="browser-bar" aria-hidden="true"><span /><span /><span /></div><img src={nutrition.url} width="1896" height="994" alt="Captura de tela do projeto demonstrativo Clara Moura · Nutrição" /></div><figcaption><span className="caption-line" />Clara Moura · Nutrição<span>Projeto demonstrativo</span></figcaption></figure>
+        <figure className="hero-preview"><div className="mockups"><div className="browser"><div className="browser-bar" aria-hidden="true"><span /><span /><span /></div><img src={nutrition.url} width="1896" height="994" alt="Captura de tela do projeto demonstrativo Clara Moura · Nutrição no computador" /></div><div className="phone phone-mini"><div className="phone-camera" /><div className="phone-screen"><img src="/projeto-estetica-mobile.webp" width="452" height="930" alt="Captura de tela do projeto demonstrativo Ateliê Sereno · Estética no celular" /></div><div className="phone-home" /></div></div><figcaption><span className="caption-line" />Clara Moura · Nutrição e Ateliê Sereno · Estética<span>Projetos demonstrativos, no computador e no celular</span></figcaption></figure>
       </section>
 
       <section id="projetos" className="section-band secondary-band reveal"><div className="page-width">
