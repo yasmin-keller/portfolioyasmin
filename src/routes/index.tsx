@@ -4,7 +4,6 @@ import { ArrowDown, ArrowRight, Check, Menu, MessageCircle, Plus, X } from "luci
 import { Button } from "@/components/ui/button";
 import * as Accordion from "@radix-ui/react-accordion";
 import nutrition from "@/assets/projeto-nutricionista.webp.asset.json";
-import aesthetics from "@/assets/projeto-estetica.webp.asset.json";
 import yasmin from "@/assets/yasmin.webp.asset.json";
 import { packages, processTiming, WHATSAPP_URL } from "@/lib/portfolio-config";
 
@@ -23,7 +22,7 @@ export const Route = createFileRoute("/")({
 const navigation = [["Projetos", "projetos"], ["Como funciona", "como-funciona"], ["Pacotes", "pacotes"], ["Perguntas", "perguntas"], ["Contato", "contato"]];
 const projects = [
   { name: "Clara Moura · Nutrição", niche: "Nutricionista", action: "Agendar consulta pelo WhatsApp", style: "Humano e acolhedor", url: "https://demonutricionista.lovable.app", image: nutrition.url, width: 1896, height: 994 },
-  { name: "Ateliê Sereno · Estética", niche: "Centro de estética", action: "Solicitar avaliação pelo WhatsApp", style: "Editorial claro", url: "https://democlinestetica.lovable.app", image: aesthetics.url, width: 1894, height: 988 },
+  { name: "Ateliê Sereno · Estética", niche: "Centro de estética", action: "Solicitar avaliação pelo WhatsApp", style: "Editorial claro", url: "https://democlinestetica.lovable.app", image: "/projeto-estetica-desktop.webp", width: 1440, height: 753 },
 ];
 const steps = [
   { title: "Uma conversa para começar", text: `Conversa de ${processTiming.conversationMinutes} minutos: entendo o seu negócio e mostro uma prévia de como o seu site pode ficar.` },
@@ -73,7 +72,7 @@ function Index() {
           <p className="hero-description">Organizo seus serviços, localização e contato em uma página clara, publicada no domínio do seu negócio.</p>
           <div className="hero-actions"><WhatsAppButton /><Button variant="editorialLink" asChild><a href="#projetos">Ver projetos <ArrowDown aria-hidden="true" /></a></Button></div>
         </div>
-        <figure className="hero-preview"><div className="mockups"><div className="browser"><div className="browser-bar" aria-hidden="true"><span /><span /><span /></div><img src={nutrition.url} width="1896" height="994" alt="Captura de tela do projeto demonstrativo Clara Moura · Nutrição no computador" /></div><div className="phone phone-mini"><div className="phone-camera" /><div className="phone-screen"><img src="/projeto-estetica-mobile.webp" width="452" height="930" alt="Captura de tela do projeto demonstrativo Ateliê Sereno · Estética no celular" /></div><div className="phone-home" /></div></div><figcaption><span className="caption-line" />Clara Moura · Nutrição e Ateliê Sereno · Estética<span>Projetos demonstrativos, no computador e no celular</span></figcaption></figure>
+        <figure className="hero-preview"><div className="mockups"><div className="browser"><div className="browser-bar" aria-hidden="true"><span /><span /><span /></div><img src="/projeto-estetica-desktop.webp" width="1440" height="753" alt="Captura de tela do projeto demonstrativo Ateliê Sereno · Estética no computador" /></div><div className="phone phone-mini"><div className="phone-camera" /><div className="phone-screen"><img src="/projeto-estetica-mobile.webp" width="452" height="930" alt="Captura de tela do projeto demonstrativo Ateliê Sereno · Estética no celular" /></div><div className="phone-home" /></div></div><figcaption><span className="caption-line" />Ateliê Sereno · Estética<span>Projeto demonstrativo, no computador e no celular · <a href="https://democlinestetica.lovable.app" target="_blank" rel="noopener">Ver site</a></span></figcaption></figure>
       </section>
 
       <section id="projetos" className="section-band secondary-band reveal"><div className="page-width">

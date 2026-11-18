@@ -1133,3 +1133,5 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .phone.phone-mini { transform: none; }
 }
+
+.hero-preview figcaption a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
