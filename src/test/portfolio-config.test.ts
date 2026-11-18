@@ -14,7 +14,7 @@ const cuidadoMensal = packageNamed("Cuidado mensal");
 describe("Portfolio service commitments", () => {
   it("uses the exact provided WhatsApp number and message", () => {
     const url = new URL(WHATSAPP_URL);
-    expect(url.pathname).toBe("/511945343249");
+    expect(url.pathname).toBe("/5511945343249");
     expect(url.searchParams.get("text")).toBe("Olá, Yasmin! Vi o seu portfólio e quero conversar sobre um site.");
   });
   it("limits Essencial to one page and five sections", () => {
