@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import * as Accordion from "@radix-ui/react-accordion";
 import nutrition from "@/assets/projeto-nutricionista.webp.asset.json";
 import aesthetics from "@/assets/projeto-estetica.webp.asset.json";
+import yasmin from "@/assets/yasmin.webp.asset.json";
 import { packages, processTiming, WHATSAPP_URL } from "@/lib/portfolio-config";
 
 export const Route = createFileRoute("/")({
@@ -21,8 +22,8 @@ export const Route = createFileRoute("/")({
 
 const navigation = [["Projetos", "projetos"], ["Como funciona", "como-funciona"], ["Pacotes", "pacotes"], ["Perguntas", "perguntas"], ["Contato", "contato"]];
 const projects = [
-  { name: "Clara Moura · Nutrição", niche: "Nutricionista", action: "Agendar consulta pelo WhatsApp", url: "https://demonutricionista.lovable.app", image: nutrition.url },
-  { name: "Ateliê Sereno · Estética", niche: "Centro de estética", action: "Solicitar avaliação pelo WhatsApp", url: "https://democlinestetica.lovable.app", image: aesthetics.url },
+  { name: "Clara Moura · Nutrição", niche: "Nutricionista", action: "Agendar consulta pelo WhatsApp", url: "https://demonutricionista.lovable.app", image: nutrition.url, width: 1896, height: 994 },
+  { name: "Ateliê Sereno · Estética", niche: "Centro de estética", action: "Solicitar avaliação pelo WhatsApp", url: "https://democlinestetica.lovable.app", image: aesthetics.url, width: 1894, height: 988 },
 ];
 const steps = [
   { title: "Uma conversa para começar", text: `Conversa de ${processTiming.conversationMinutes} minutos: entendo o seu negócio e mostro uma demonstração no celular.` },
@@ -72,19 +73,19 @@ function Index() {
           <p className="hero-description">Organizo seus serviços, localização e contato em uma página clara, revisada no celular e publicada no domínio do seu negócio.</p>
           <div className="hero-actions"><WhatsAppButton /><Button variant="editorialLink" asChild><a href="#projetos">Ver projetos <ArrowDown aria-hidden="true" /></a></Button></div>
         </div>
-        <figure className="hero-preview"><div className="phone"><div className="phone-camera" /><div className="phone-screen"><img src={nutrition.url} width="1465" height="768" alt="Captura de tela do projeto demonstrativo Clara Moura · Nutrição" /><div className="phone-screen-bottom" /></div><div className="phone-home" /></div><figcaption><span className="caption-line" />Clara Moura · Nutrição<span>Projeto demonstrativo</span></figcaption></figure>
+        <figure className="hero-preview"><div className="phone"><div className="phone-camera" /><div className="phone-screen"><img src={nutrition.url} width="1896" height="994" alt="Captura de tela do projeto demonstrativo Clara Moura · Nutrição" /><div className="phone-screen-bottom" /></div><div className="phone-home" /></div><figcaption><span className="caption-line" />Clara Moura · Nutrição<span>Projeto demonstrativo</span></figcaption></figure>
       </section>
 
       <section id="projetos" className="section-band secondary-band reveal"><div className="page-width">
         <div className="section-heading"><div><p className="eyebrow"><span />PORTFÓLIO</p><h2>Projetos demonstrativos<span className="accent-period">.</span></h2></div><p>Sites criados para mostrar o meu trabalho,<br className="desktop-break" /> com marcas e dados fictícios.</p></div>
-        <div className="project-grid">{projects.map(project => <article className="project-card" key={project.name}><div className="project-image"><img src={project.image} alt={`Captura de tela do projeto demonstrativo ${project.name}`} loading="lazy" width="1473" height="768" /><span className="demo-label">Projeto demonstrativo</span></div><div className="project-info"><p className="project-niche">{project.niche}</p><h3>{project.name}</h3><p className="project-action"><MessageCircle aria-hidden="true" />{project.action}</p><Button variant="editorialOutline" size="editorial" asChild><a href={project.url} target="_blank" rel="noopener">Ver site <ArrowRight aria-hidden="true" /></a></Button></div></article>)}</div>
+        <div className="project-grid">{projects.map(project => <article className="project-card" key={project.name}><div className="project-image"><img src={project.image} alt={`Captura de tela do projeto demonstrativo ${project.name}`} loading="lazy" width={project.width} height={project.height} /><span className="demo-label">Projeto demonstrativo</span></div><div className="project-info"><p className="project-niche">{project.niche}</p><h3>{project.name}</h3><p className="project-action"><MessageCircle aria-hidden="true" />{project.action}</p><Button variant="editorialOutline" size="editorial" asChild><a href={project.url} target="_blank" rel="noopener">Ver site <ArrowRight aria-hidden="true" /></a></Button></div></article>)}</div>
       </div></section>
 
       <section id="como-funciona" className="section-band reveal"><div className="page-width"><p className="eyebrow"><span />DO PRIMEIRO CONTATO À PUBLICAÇÃO</p><h2>Como funciona<span className="accent-period">.</span></h2><ol className="process-grid">{steps.map((step, i) => <li key={step.title}><span className="step-number">0{i + 1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div></section>
 
       <section id="pacotes" className="section-band secondary-band reveal"><div className="page-width"><div className="section-heading"><div><p className="eyebrow"><span />UM ESCOPO CLARO, DO INÍCIO AO FIM</p><h2>Pacotes<span className="accent-period">.</span></h2></div><p>Valor fixo apresentado na conversa,<br className="desktop-break" /> de acordo com o pacote.</p></div><div className="package-grid">{packages.map((pack, i) => <article className="package-card" key={pack.name}><span className="package-index">0{i + 1}</span><h3>{pack.name}</h3><p className="package-subtitle">{pack.subtitle}</p><ul>{pack.features.map(feature => <li key={feature}><Check aria-hidden="true" /><span>{feature}</span></li>)}</ul>{pack.deadline && <p className="package-note"><strong>Prazo</strong>{pack.deadline}</p>}{pack.note && <p className="package-note">{pack.note}</p>}<WhatsAppButton /></article>)}</div><p className="additions">Adicionais: página extra, animação, imagens criadas com IA, textos do zero, rodada extra de revisão.</p></div></section>
 
-      <section id="sobre" className="section-band about-section reveal"><div className="page-width about-inner"><div className="portrait" aria-label="Iniciais de Yasmin Keller">YK</div><div><p className="eyebrow"><span />QUEM ESTÁ POR TRÁS</p><h2>Sou a Yasmin, de Santos<span className="accent-period">.</span></h2><p>Sou a Yasmin, de Santos. Trabalho com dados e tecnologia, sou formada em Nutrição pela UNIFESP e estou concluindo Análise e Desenvolvimento de Sistemas. Uso ferramentas de IA para construir sites com agilidade e reviso tudo manualmente, no celular, antes de entregar.</p></div></div></section>
+      <section id="sobre" className="section-band about-section reveal"><div className="page-width about-inner"><img className="portrait" src={yasmin.url} width="882" height="882" alt="Yasmin Keller, de Santos" loading="lazy" /><div><p className="eyebrow"><span />QUEM ESTÁ POR TRÁS</p><h2>Sou a Yasmin, de Santos<span className="accent-period">.</span></h2><p>Sou a Yasmin, de Santos. Trabalho com dados e tecnologia, sou formada em Nutrição pela UNIFESP e estou concluindo Análise e Desenvolvimento de Sistemas. Uso ferramentas de IA para construir sites com agilidade e reviso tudo manualmente, no celular, antes de entregar.</p></div></div></section>
 
       <section id="perguntas" className="section-band secondary-band reveal"><div className="page-width faq-grid"><div><p className="eyebrow"><span />SEM LETRAS MIÚDAS</p><h2>Perguntas<br />frequentes<span className="accent-period">.</span></h2></div><Accordion.Root type="single" collapsible className="faq-list">{questions.map(([question, answer], i) => <Accordion.Item value={`question-${i}`} key={question} className="faq-item"><Accordion.Header><Accordion.Trigger className="faq-trigger">{question}<Plus aria-hidden="true" /></Accordion.Trigger></Accordion.Header><Accordion.Content className="faq-content"><p>{answer}</p></Accordion.Content></Accordion.Item>)}</Accordion.Root></div></section>
 
